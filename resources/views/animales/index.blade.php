@@ -21,8 +21,13 @@
                   <td> {{ $animal->especie}} </td>
                   <td>
                       <a href="{{ route('animales.show', $animal) }}" class="btn btn-info">Ver</a>
-                      <a href="#" class="btn btn-dark">Editar</a>
-                      <a href="#" class="btn btn-danger">Eliminar</a>
+                      <a href="{{ route('animales.edit',$animal)}}" class="btn btn-dark">Editar</a>
+                      <form style="display:inline-block" action="{{ route('animales.destroy',$animal)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Eliminar</Button>
+                      </form>
+                      
                   </td>
                 </tr>
               @endforeach

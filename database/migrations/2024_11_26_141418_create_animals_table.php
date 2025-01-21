@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('especie');
+            $table->string('url');
             $table->timestamps();
         });
     }

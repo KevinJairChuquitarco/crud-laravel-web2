@@ -14,6 +14,10 @@
                 <label for="nombre" class="form-label">Especie</label>
                 <input type="text" class="form-control" id="especie" name="especie" placeholder="Ingrese la especie">
             </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Url Imagen</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Ingrese la url de la imagen">
+            </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
     </div>

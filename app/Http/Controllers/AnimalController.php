@@ -23,7 +23,8 @@ class AnimalController extends Controller
     {
         $request->validate([
             'nombre'=>'required|string|max:255',
-            'especie'=>'required|string|max:255'
+            'especie'=>'required|string|max:255',
+            'url'=>'required|string'
         ]);
         
         Animal::create($request->all());
@@ -46,7 +47,8 @@ class AnimalController extends Controller
     {
         $request->validate([
             'nombre'=>'required|string|max:255',
-            'especie'=>'required|string|max:255'
+            'especie'=>'required|string|max:255',
+            'url'=>'required|string'
         ]);
 
         $animal = Animal::find($id);
